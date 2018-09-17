@@ -1,0 +1,247 @@
+
+/*  Font & Text
+--------------------------------------------------------------------- */
+
+.f-hand {
+    /* font-family: 'Caveat', cursive; */
+    /* font-family: 'Just Another Hand', cursive; */
+    font-family: 'Kristi', cursive;
+}
+
+.t-cen {
+    text-align: center;
+}
+
+.t-left {
+    text-align: left;
+}
+
+.t-right {
+    text-align: right;
+}
+
+.fc-white {
+    color: white;
+}
+
+.fs-1\.2em {
+    font-size: 1.2em;
+}
+
+.fs-1\.5em {
+    font-size: 1.5em;
+}
+
+.fs-2em {
+    font-size: 2em;
+}
+
+.fs-3em {
+    font-size: 3em;
+}
+
+.fs-4em {
+    font-size: 4em;
+}
+
+.t-space-5px {
+    letter-spacing: 5px;
+}
+
+.case-upper {
+    text-transform: uppercase;
+}
+
+
+/*  Size
+--------------------------------------------------------------------- */
+
+.w-35p {
+    width: 35px;
+}
+
+.w-200p {
+    width: 200px;
+}
+
+.w-240p {
+    width: 240px;
+}
+
+.w-350p {
+    width: 350px;
+}
+
+.w-450p {
+    width: 450px;
+}
+
+.h-100\% {
+    height: 100%;
+}
+
+.w-100\% {
+    width: 100%;
+}
+
+.w-40\% {
+    width: 40%;
+}
+
+.w-70\% {
+    width: 70%;
+}
+
+.w-60vw {
+    width: 60vw;
+}
+
+.h-60px {
+    height: 60px;
+}
+
+.h-90px {
+    height: 90px;
+}
+
+.h-150px {
+    height: 150px;
+}
+
+/*  Padding & Margin
+--------------------------------------------------------------------- */
+
+.pad-30px {
+    padding: 30px;
+}
+
+.pad-top-5em {
+    padding-top: 5em;
+}
+
+.pad-top-10px {
+    padding-top: 10px;
+}
+
+.pad-top-40px {
+    padding-top: 40px;
+}
+
+.pad-top-0\.4em {
+    padding-top: 0.4em;
+}
+
+.mar-top-1em {
+    margin-top: 1em;
+}
+
+.mar-top-30px {
+    margin-top: 30px;
+}
+
+.mar-bot-30px {
+    margin-bottom: 30px;
+}
+
+.mar-top-50px {
+    margin-top: 50px;
+}
+
+.mar-bot-50px {
+    margin-bottom: 50px;
+}
+
+.mar-l-40vw {
+    margin-left: 40vw;
+}
+
+.mar-r-40vw {
+    margin-right: 40vw;
+}
+
+.mar-b-30px {
+    margin-bottom: 30px;
+}
+
+
+
+/*  Positioning
+--------------------------------------------------------------------- */
+
+.pos-fix {
+    position: fixed;
+}
+
+.vert-cen {
+    position: relative;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+.hor-cen {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.vert\/hor-cen {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.vert\/hor-cen-high {
+    position: relative;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -100%);
+}
+
+/*  Borders
+--------------------------------------------------------------------- */
+
+.bord-top {
+    border-top: lightgrey 1px solid;
+}
+
+.bord-left {
+    border-left: lightgrey 1px solid;
+}
+
+.bord-right {
+    border-right: lightgrey 1px solid;
+}
+
+.bord-bottom {
+    border-bottom: lightgrey 1px solid;
+}
+
+
+/*  Backgrounds
+--------------------------------------------------------------------- */
+
+.bgc-teal {
+    background: teal;
+}
+
+.bgc-orange {
+    background: orange;
+}
+
+.bgc-skyblue {
+    background: lightskyblue;
+}
+
+
+/*  Cursor
+--------------------------------------------------------------------- */
+
+
+.cursor-point {
+    cursor: pointer;
+}
+
+.overflow-scroll {
+    overflow: scroll;
+}

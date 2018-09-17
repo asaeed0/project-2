@@ -1,0 +1,34 @@
+<main>
+    <div class="restaurants-page-grid w-60vw scroller">
+        {{#each restaurants}}
+        <div class="restaurant-grid">
+            <div>
+                <div class="vert-cen">
+                    <div class="t-cen fs-3em">{{name}}</div>
+                    <div class="case-upper t-cen t-space-5px">—{{brief}}—</div>
+                </div>
+            </div>
+            <div class="restaurant-ambiance t-cen">
+                <img class="vert-cen" src="{{photos.ambiance.link}}">
+            </div>
+            <div>
+                <div class="pad-top-40px">
+                    <div class="w-70% hor-cen">{{description}}</div>
+                    <div class='t-cen'>
+                        {{#each menus}}
+                            <button class="rest-btn" onclick="loadPage({{link}})">Check out our {{name}}!</button>
+                        {{/each}}
+                    </div>
+                </div>
+            </div>
+            <div class='t-cen'>{{phone}} | {{address}}</div>
+        </div>
+        {{/each}}
+    </div>
+    <div id="restaurants-photo">
+        <div id="rest-title">
+            <div>CASA</div>
+            <div>TORTUGA</div>
+        </div>
+    </div>
+</main>

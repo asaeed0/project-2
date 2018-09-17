@@ -1,0 +1,51 @@
+<main>
+    <div id="room-photo">
+
+    </div>
+    <div class="room-details-grid mar-l-40vw room-introduction">
+        <div class="page" id="pg1">
+            <div>
+                <h1>{{everest.name}}</h1>
+                <h2>{{everest.tagline.[0]}}</h2>
+                <hr>
+                {{everest.description}}
+            </div>
+        </div>
+        <div class="page" id="pg2">
+            <div class="w-450p vert/hor-cen-high room-description">
+                <h2>{{everest.tagline.[1]}}</h2>
+                <hr>
+                <h3>{{everest.guests}} Guests | $ {{everest.price}}</h3>
+                <p>
+                    {{#each everest.layout}}
+                        <h6>{{room}}</h6>
+                        <br> {{beds}}
+                        {{#if tv}}<br> HD Television{{/if}}
+                        {{#if bathroom}}<br>Bathroom{{/if}}
+                    {{/each}}
+                </p>
+            </div>
+        </div>
+        <div class="page" id="pg3">
+            <div>
+                <div class="t-right">
+                    Room Amenities
+                    <hr>
+                </div>
+                <div class="room-amenities-grid">
+                    {{#each everest.amenities}}
+                        <div class="h-60px">
+                            <div class="vert-cen fs-1.2em">{{{icon}}}</div>
+                        </div> 
+                        <div>
+                            <div class="vert-cen">{{{description}}}</div>
+                        </div>
+                    {{/each}}
+                </div>
+            </div>
+            <div>
+                {{everest.restrictions}}
+            </div>
+        </div>
+    </div>
+</main

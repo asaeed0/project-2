@@ -1,0 +1,62 @@
+/* ---------------------------------------------------------------------
+    LAYOUT PAGE (admin.hbs) - OVERALL PAGE LAYOUT
+--------------------------------------------------------------------- */
+
+.admin-site {
+    display: grid;
+    grid-template-columns: 250px auto;
+    grid-template-rows: 80px auto;
+    grid-template-areas: 
+        "title header"
+        "nav main";
+
+    /* grid-gap: 20px; */
+}
+
+.admin-title {
+    grid-area: title;
+}
+
+.admin-header {
+    grid-area: header;
+}
+
+.admin-nav {
+    grid-area: nav;
+}
+
+.admin-main {
+    grid-area: main;
+}
+
+/* ---------------------------------------------------------------------
+    LAYOUT PAGE (admin.hbs) - NAV LAYOUT
+--------------------------------------------------------------------- */
+
+.nav-grid {
+    display: grid;
+    grid-template-columns: 30% 55% 15%;
+    grid-template-rows: repeat(4, 60px);
+
+    text-align: center;
+}
+
+
+/* ---------------------------------------------------------------------
+    LAYOUT PAGE (admin.hbs) - HEADER LAYOUT
+--------------------------------------------------------------------- */
+
+.header-grid {
+    display: grid;
+    grid-template-columns: auto 200px;
+}
+
+/* ---------------------------------------------------------------------
+    LOGIN PAGE (admin.hbs)
+--------------------------------------------------------------------- */
+
+.login-site {
+    display: grid;
+    grid-template-columns: 100vw;
+    grid-template-rows: 100vh;
+}

@@ -1,0 +1,52 @@
+{
+  "name": "project-2",
+  "version": "1.0.0",
+  "description": "A web-app for Hotel Nomad's website, reservations and check-in portal",
+  "main": "app.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "start": "node app.js",
+    "test": "nodemon app.js",
+    "pre-test": "eslint --ignore-path .gitignore ./",
+    "lint": "eslint --ignore-path .gitignore ./"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/asaeed0/project-2.git"
+  },
+  "keywords": [
+    "hotel",
+    "full-stack",
+    "front-end",
+    "back-end",
+    "node",
+    "express",
+    "reservations"
+  ],
+  "author": "Amaan Saeed, Paolo La Vita, Sunil B",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/asaeed0/project-2/issues"
+  },
+  "homepage": "https://github.com/asaeed0/project-2#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "dotenv": "^6.0.0",
+    "express": "^4.16.3",
+    "express-handlebars": "^3.0.0",
+    "firebase": "^5.3.0",
+    "mongoose": "^5.2.15",
+    "mysql2": "^1.5.3",
+    "npm": "^6.3.0",
+    "sequelize": "^4.38.0"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "eslint": "^5.2.0",
+    "eslint-config-google": "^0.9.1",
+    "mocha": "^5.2.0"
+  }
+}

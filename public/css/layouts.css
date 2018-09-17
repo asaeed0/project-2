@@ -1,0 +1,268 @@
+html,
+body {
+  padding: 0px;
+  margin: 0px;
+}
+
+
+/* ---------------------------------------------------------------------
+    BORDER BOX
+--------------------------------------------------------------------- */
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+
+/* ---------------------------------------------------------------------
+    MAIN PAGE (main.hbs)
+--------------------------------------------------------------------- */
+
+/* .main-grid {
+  display: grid;
+  grid-template-columns: 1vw;
+  grid-template-rows: 1vh;
+} */
+
+
+/* ---------------------------------------------------------------------
+    EXPLORE PAGE (explore.hbs)
+--------------------------------------------------------------------- */
+
+.index-grid {
+  display: grid;
+  grid-template-columns: 5% 90% 5%;
+  grid-template-rows: 600px 1fr;
+  grid-template-areas:
+  ". image ."
+  ". . .";
+}
+
+.landing-image {
+  grid-area: image;
+
+  overflow: hidden;
+}
+
+.landing-image > img {
+  width: 100%;
+}
+
+
+/* ---------------------------------------------------------------------
+    EXPLORE PAGE (explore.hbs)
+--------------------------------------------------------------------- */
+
+.explore-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 50vh 50vh;
+    
+    grid-template-areas:
+      "e-rooms e-restaurants"
+      "e-rooms e-amenities";
+  }
+
+.explore-rooms {
+  grid-area: e-rooms;
+  overflow: hidden;
+}
+
+.explore-restaurants {
+  grid-area: e-restaurants;
+  overflow: hidden;
+}
+
+.explore-amenities {
+  grid-area: e-amenities;
+  overflow: hidden;
+}
+
+
+/* ---------------------------------------------------------------------
+    INDIVIDUAL ROOM PAGE (room.hbs)
+--------------------------------------------------------------------- */
+
+#room-photo {
+  position: fixed;
+  left: 0px;
+  height: 100%;
+  width: 40vw;
+}
+
+.room-details-grid {
+  display: grid;
+  grid-template-rows: repeat(3, 100vh);
+}
+
+.room-amenities-grid {
+  display: grid;
+  grid-template-columns: 40px 480px;
+
+}
+
+
+/* ---------------------------------------------------------------------
+    AMENITIES PAGE (amenities.hbs)
+--------------------------------------------------------------------- */
+
+#amenity-photo {
+  position: fixed;
+  left: 0px;
+  height: 100%;
+  width: 40vw;
+}
+
+.amenity-details-grid {
+  display: grid;
+  grid-template-rows: repeat(3, 100vh);
+}
+
+
+/* ---------------------------------------------------------------------
+    RESTAURANTS PAGE (restaurants.hbs)
+--------------------------------------------------------------------- */
+
+#restaurants-photo {
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  height: 100%;
+  width: 40vw;
+}
+
+.restaurants-page-grid {
+  display: grid;
+  grid-template-rows: repeat(2, 100vh);
+}
+
+.restaurant-grid {
+  display: grid;
+  grid-template-rows: 3fr 4fr 5fr 40px;
+}
+
+/* ---------------------------------------------------------------------
+    BOOKING PAGE (booking.hbs)
+--------------------------------------------------------------------- */
+
+
+/*  Page Layout
+--------------------------------------------------------------------- */
+
+.booking-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 100vh;
+
+  grid-template-areas:
+    "b-when b-where b-who";
+}
+
+.booking-when {
+  grid-area: b-when;
+}
+
+.booking-where {
+  grid-area: b-where;
+  border-left: lightgray 1px solid;
+  border-right: lightgray 1px solid;
+}
+
+.booking-who {
+  grid-area: b-who;
+}
+
+/*  Where Grid Layout
+--------------------------------------------------------------------- */
+
+.where-grid {
+  display: grid;
+  grid-template-columns: 240px;
+  grid-template-rows: 70px;
+}
+
+
+/*  When Grid Layout
+--------------------------------------------------------------------- */
+
+.when-grid {
+  display: grid;
+  grid-template-columns: 240px;
+  grid-template-rows: 70px 35px auto 35px auto 35px;
+
+  height: 100%;
+}
+
+
+/*  Guest Grid Layout
+--------------------------------------------------------------------- */
+
+.guests-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 35px 60px;
+  grid-template-areas:
+    "g-adults g-adults g-adults g-children g-children g-children";
+}
+
+.guests-adults {
+  grid-area: g-adults;
+}
+
+.guests-children {
+  grid-area: g-children;
+}
+
+
+/*  Datepicker Grid Layout
+--------------------------------------------------------------------- */
+
+.datepicker-grid {
+  display: grid;
+  grid-template-columns: 30px auto 30px;
+  grid-template-rows: 20px 140px;
+  grid-template-areas: 
+    ". . . "
+    "d-cal d-cal d-cal";
+}
+
+.datepicker-cal {
+  grid-area: d-cal;
+}
+
+
+/*  Where Layout
+--------------------------------------------------------------------- */
+
+.where-grid {
+  display: grid;
+  grid-template-columns: 240px;
+  /* grid-template-rows: ; */
+}
+
+/*  Who Layout
+--------------------------------------------------------------------- */
+
+.who-grid {
+  display: grid;
+  grid-template-columns: 240px;
+  grid-template-rows: 70px 35px auto 35px auto 35px;
+}
+
+
+/* +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-
+   
+    RESPONSIVE DESIGN - MEDIA QUERIES
+
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+- */
+
+@supports (grid-area: auto) {
+
+  @media screen and (min-width: 50em) {
+    
+
+  }
+}

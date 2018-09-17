@@ -1,0 +1,138 @@
+<main class="booking-grid">
+    <div class="booking-when pad-30px">
+        <div class="hor-cen h-100% w-240p">
+            <div class="when-grid hor-cen">
+                <div class="booking-title">When?</div>
+                <div class="guests-title">GUESTS</div>
+                <div class="guests-grid">
+                    <div class="guests-adults pad-top-10px bord-top bord-right t-cen">Adults</div>
+                    <div class="guests-children pad-top-10px bord-top t-cen">Children</div>
+                    <div class="cursor-point bord-bottom t-right fs-1.5em pad-top-0.4em" id="adults-minus">-</div>
+                    <div class="t-cen bord-bottom fs-3em" id="adults-number">0</div>
+                    <div class="cursor-point bord-bottom bord-right fs-1.5em pad-top-0.4em" id="adults-plus">+</div>
+                    <div class="cursor-point bord-bottom t-right fs-1.5em pad-top-0.4em" id="children-minus">-</div>
+                    <div class="t-cen bord-bottom fs-3em"  id="children-number">0</div>
+                    <div class="cursor-point bord-bottom fs-1.5em pad-top-0.4em" id="children-plus">+</div>
+                </div>
+            
+
+                <div class="datepicker-title t-left">DATES</div>
+                <div class="datepicker-grid t-cen">
+                    <div><</div>
+                    <div>MONTH YEAR</div>
+                    <div>></div>
+                    <div class="datepicker-cal">
+                        <table>
+                            <thead>
+                                <th class="w-35p">Mo</th>
+                                <th class="w-35p">Tu</th>
+                                <th class="w-35p">We</th>
+                                <th class="w-35p">Th</th>
+                                <th class="w-35p">Fr</th>
+                                <th class="w-35p">Sa</th>
+                                <th class="w-35p">Su</th>
+                            </thead>
+                            <tbody>
+                                {{#each cal}}
+                                    
+                                {{/each}}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="t-cen"><button>Find a room</button></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="booking-where pad-30px">
+        <div class="hor-cen h-100% w-240p">
+            <div class="where-grid hor-cen">
+                <div class="booking-title">Where?</div>
+                    
+                    <div class="bgc-teal h-150px mar-bot-30px">
+                        <div class="where-title">
+                            <div>Room 1</div>
+                        </div>
+                    </div>
+                    <div class="bgc-teal h-150px mar-bot-30px">
+                        <div class="where-title">
+                            <div>Room 2</div>
+                        </div>
+                    </div>
+                    <div class="bgc-teal h-150px mar-bot-30px">
+                        <div class="where-title">
+                            <div>Room 3</div>
+                        </div>
+                    </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="booking-who pad-30px overflow-scroll">
+        <div class="hor-cen h-100% w-240p">
+            <form method="POST" name="reservationForm" action="/api/booking">
+                <div class="who-grid hor-cen">
+                    <div class="booking-title">Who?</div>
+                    <div>PERSONAL DETAILS</div>
+                    <div class="who-input">
+                        <input type="text" name="first_name" placeholder="First Name"></input>
+                        <br> <input type="text" name="last_name" placeholder="Last Name"></input>
+                        <br> <input type="text" name="phone" placeholder="Phone"></input>
+                        <br> <input type="text" name="email" placeholder="Email"></input>
+                    </div>
+                    <div>ADDITIONAL INFORMATION</div>
+                    <div class="who-input">
+                        <input type="text" name="flight" placeholder="Flight Number / Arrival Time"></input>
+                        <br> <input type="text" name="notes" style="height: 90px;" placeholder="Notes"></input>
+                    </div>
+
+                    <div>ORDER REVIEW</div>
+                    <div>
+                        <table id="order-review-table">
+                            <tr>
+                                <td>Arrival</td>
+                                <td id="booking-checkIn">16 August</td>
+                            </tr>
+                            <tr>
+                                <td>Departure</td>
+                                <td id="booking-checkOut">24 August</td>
+                            </tr>
+                            <tr>
+                                <td>Nights</td>
+                                <td id="booking-nights">8</td>
+                            </tr>
+                            <tr>
+                                <td>Guests</td>
+                                <td id="booking-guests">0</td>
+                            </tr>
+                            <tr>
+                                <td>Children</td>
+                                <td id="booking-children">0</td>
+                            </tr>
+                            <tr>
+                                <td>Room Type</td>
+                                <td id="booking-room-type">Suite</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <br> Total: $<span id="booking-total"></span>25 200
+                    <label for="terms">
+                        <input name="terms" type="checkbox"></input>
+                        I agree to the Booking Rules
+                    </label>
+                    <br> <button type="submit">Review & Reserve</button>
+                </div>
+                <div id="hidden-inputs">
+                    <input type="hidden" name="guests" value="0"></input>
+                    <input type="hidden" name="children" value="0"></input>
+                    <input type="hidden" name="checkIn_date" value="2018-08-16"></input>
+                    <input type="hidden" name="checkOut_date" value="2018-08-22"></input>
+                    <input type="hidden" name="room_id" value="3"></input>
+                    <input type="hidden" name="price" value="3000"></input>
+                </div>
+            </form>
+        </div>
+    </div>
+</main>

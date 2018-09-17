@@ -1,0 +1,27 @@
+<main>
+    <div id="amenity-photo" class="bgc-orange">
+
+    </div>
+
+    <div class="amenity-details-grid mar-l-40vw">
+        {{#each amenities}}
+            <div class="pad-top-5em" onscroll="test()">
+                <div class="t-cen fs-3em">
+                    {{name}}
+                    <hr class="w-40% mar-top-30px mar-bot-30px">
+                </div>
+                
+                <div class="t-cen w-70% hor-cen fs-1.2em">{{brief}}</div>
+                <div class="t-cen fs-4em mar-top-50px mar-bot-50px">{{{icon.link}}}</div>
+                <div class="t-cen fs-1.2em"> 
+                    {{#each hours}}
+                        <br> {{days}} - {{hours}}
+                    {{/each}}
+                </div>
+                {{#if restrictions}}
+                    <div class="t-cen">*{{restrictions}}</div>
+                {{/if}}
+            </div>
+        {{/each}}
+    </div>
+</main>

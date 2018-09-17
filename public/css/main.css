@@ -1,0 +1,218 @@
+/* ---------------------------------------------------------------------
+    EXPLORE PAGE (explore.hbs)
+--------------------------------------------------------------------- */
+
+.rooms, .restaurants, .amenities {
+    overflow: hidden;
+    cursor: pointer;
+}
+
+/*  Image placement
+--------------------------------------------------------------------- */
+
+.room-1 {
+    background-image: url("../img/room1001.jpg");
+    background-size: cover;
+    background-position: center top;
+}
+
+.restaurant-1 {
+    background-image: url("../img/restaurant1001.jpg");
+
+    /* Set a specific height */ 
+
+    /* Create the parallax scrolling effect */
+    background-repeat: no-repeat;
+    /* background-attachment: fixed; */
+    background-position: center;
+    background-size: cover;
+}
+
+.amenity-1 {
+    background-image: url("../img/fitness1001.jpg");
+
+    /* Set a specific height */
+    height: 100%;
+
+    /* Create the parallax scrolling effect */
+    background-repeat: no-repeat;
+    /* background-attachment: fixed; */
+    background-position: center;
+    background-size: cover;
+}
+
+
+.dim {
+    background-color: rgba(87, 87, 87, 0.3);
+    -webkit-transition: background-color 0.3s; /* Safari */
+    transition: all 0.3s;
+}
+
+.breath {
+    transform: scale(1.0);
+
+    /* Creates a breathing transition */
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s; /* Safari */
+}
+
+
+/*  Styling and Animation
+--------------------------------------------------------------------- */
+
+.explore-title {
+    width: fit-content;
+    font-size: 2em;
+}
+
+.explore-title a:after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 0%;
+    content: '.';
+    color: transparent;
+    background: white;
+    height: 2px;
+
+    transition: all 0.5s;
+  }
+  .explore-title a:hover:after {
+    width: 100%;
+  }
+
+
+/* ---------------------------------------------------------------------
+    RESTAURANTS PAGE (restaurants.hbs)
+--------------------------------------------------------------------- */
+
+.restaurant-ambiance img {
+    max-width: 30vw;
+    max-height: 20vh;
+}
+
+#restaurants-photo {
+    background-image:url('/img/restaurant1002.jpeg');
+    background-size: cover;
+    background-position: center top;
+}
+
+#rest-title {
+    position: fixed;
+    bottom: -4px;
+    right: -3px;
+    width: fit-content;
+    color: white;
+    text-align: right;
+
+    font-family: 'Catamaran', sans-serif;
+    font-size: 6em;
+    line-height: 0.65em;
+    letter-spacing: -10px;
+}
+
+.rest-btn {
+    margin-top: 30px;
+
+    background: none;
+    border: black 1px solid;
+    border-radius: 4px;
+    color: black;
+    height: 40px;
+    width: 250px;
+    cursor: pointer;
+
+    font-size: 1.1em;
+}
+
+.rest-btn:hover {
+    border-color: grey;
+    color: grey;
+}
+
+/* ---------------------------------------------------------------------
+    BOOKING (booking.hbs)
+--------------------------------------------------------------------- */
+
+
+.booking-title {
+    font-size: 1.5em;
+}
+
+.who-input > input {
+    background: lightgray;
+    border: none;
+    border-radius: 3px;
+    height: 35px;
+    width: 240px;
+    
+    padding-left:10px;
+    margin-bottom: 1em;
+}
+
+.who-input > input:focus {
+    outline: none;
+    border: gray 1px solid;
+}
+
+.where-title {
+    height: 100%;
+    width: 100%;
+    padding-top: 100px;
+    opacity: 0;
+
+    transition: all 0.3s;
+}
+
+.where-title:hover {
+    opacity: 1;
+}
+
+.where-title > div {
+    background: lightgrey;
+    width: 240px;
+    padding: 5px 10px;
+    font-size: 1.2em;
+    color: white;
+    text-align: right;
+
+    transition: all 0.3s;
+}
+
+#order-review-table {
+    width: 240px;
+    border-collapse: collapse;
+    border: solid;
+    border-width: 1px 0;
+}
+
+#order-review-table * td {
+    border: solid;
+    border-width: 1px 0;
+    width: 120px;
+    padding: 7px 0px;
+}
+
+/* ---------------------------------------------------------------------
+    AMENITIES PAGE (amenities.hbs)
+--------------------------------------------------------------------- */
+
+
+#amenity-photo {
+    background-image:url('/img/yoga.jpg');
+    background-size: cover;
+    background-position: center top;
+}
+
+
+/* ---------------------------------------------------------------------
+    INDIVIDUAL ROOM PAGE (room.hbs)
+--------------------------------------------------------------------- */
+
+#room-photo {
+    background-image:url('/img/bathroom.jpg');
+    background-size: cover;
+    background-position: center top;
+}
